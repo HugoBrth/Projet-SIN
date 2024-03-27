@@ -70,7 +70,7 @@ export const Typographie = ({
       variantStyles = "text-button";
       break;
     case "link":
-      variantStyles = "text-link underline";
+      variantStyles = "text-link underline cursor-pointer";
       break;
   }
 

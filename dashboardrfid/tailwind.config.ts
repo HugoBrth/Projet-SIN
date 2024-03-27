@@ -2,9 +2,12 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     fontSize: {
@@ -78,7 +81,17 @@ const config: Config = {
         },
       ],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#ae51ff",
+        secondary: "#2b394d",
+        tercery: "#556070",
+        grey: "",
+        success: "#46D5B3",
+        error: "#FF4848",
+        white: "#fff",
+      }
+    },
   },
   plugins: [],
 };
