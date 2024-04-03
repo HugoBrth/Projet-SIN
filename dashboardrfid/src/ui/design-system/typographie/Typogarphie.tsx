@@ -26,13 +26,23 @@ interface Props {
     | "div";
   weight?: "regular" | "medium";
   className?: string;
-  theme?: "";
+  theme?:
+    | "primary"
+    | "secondary"
+    | "tercery"
+    | "ongoing"
+    | "success"
+    | "error"
+    | "accent1"
+    | "accent2"
+    | "grey"
+    | "white";
   children: React.ReactNode;
 }
 
 export const Typographie = ({
   variant = "body-base",
-  theme = "",
+  theme = "white",
   weight = "regular",
   component: Component = "div",
   className,
@@ -75,10 +85,35 @@ export const Typographie = ({
   }
 
   switch (theme) {
-    case "":
+    case "primary":
+      variantThemes = "text-primary-200"
       break;
-
-    default:
+    case "secondary":
+       variantThemes = "text-secondary-400"
+      break;
+    case "tercery":
+       variantThemes = "text-tercery"
+      break;
+    case "ongoing":
+       variantThemes = "text-ongoing"
+      break;
+    case "success":
+       variantThemes = "text-success"
+      break;
+    case "error":
+       variantThemes = "text-error"
+      break;
+    case "accent1":
+       variantThemes = "text-accent1"
+      break;
+    case "accent2":
+       variantThemes = "text-accent2"
+      break;
+    case "grey":
+       variantThemes = "text-grey"
+      break;
+    case "white":
+       variantThemes = "text-white"
       break;
   }
 

@@ -83,13 +83,24 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "#ae51ff",
-        secondary: "#2b394d",
-        tercery: "#556070",
-        grey: "",
-        success: "#46D5B3",
-        error: "#FF4848",
-        white: "#fff",
+        primary: {
+          200: "#4F4F4F",
+          400: "#242424",
+          600: "#161717",
+          800: "#000",
+        },
+        secondary: {
+          200: "#FCDF78",
+          400: "#FAD85D"
+        },
+        tercery: "#383456",
+        ongoing: "#6F82E8",
+        success: "#73FFCC",
+        error: "#F94144",
+        accent1: "#0BF4C8",
+        accent2: "#F2A0FF",
+        grey: "#666262",
+        white: "#fff"
       }
     },
   },
