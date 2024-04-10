@@ -1,8 +1,8 @@
 import clsx from "clsx";
 
 interface Props {
-  variant?: "";
-  size?: "";
+  variant?: "primary" | "outline" | "disable" | "noborder" | "icon";
+  size?: "large" | "medium" | "small";
   icon?: { icon: React.ElementType };
   iconTheme?: "primary" | "secondary";
   iconPosition?: "left" | "right";
@@ -11,9 +11,9 @@ interface Props {
 }
 
 export const Button = ({
-  size = "",
+  size = "medium",
   className,
-  variant = "",
+  variant = "primary",
   icon,
   iconTheme = "primary",
   iconPosition = "right",
@@ -21,36 +21,53 @@ export const Button = ({
 }: Props) => {
   let variantStyles: string = "",
     sizeStyles: string = "",
-    iconsSize: number = 0;
+    iconSize: number = 0;
 
   switch (size) {
-    case "":
+    case "large":
+      sizeStyles = " text-base px-[35px] py-[18px]";
+      iconSize = 25;
       break;
-
-    default:
+    case "medium":
+      sizeStyles = " text-small px-[30px] py-[14px]";
+      iconSize = 20;
+      break;
+    case "small":
+      sizeStyles = " text-pretitle px-[25px] py-[12px]";
+      iconSize = 18;
       break;
   }
 
   switch (variant) {
-    case "":
+    case "primary":
+      variantStyles =
+        "bg-ongoing font-medium hover:opacity-70 text-white rounded-sm";
       break;
-
-    default:
+    case "outline":
+      variantStyles =
+        "border-2 font-medium hover:opacity-70 border-ongoing bg-none text-white rounded-sm";
+      break;
+    case "disable":
+      variantStyles =
+        "bg-ongoing font-medium text-white rounded-sm opacity-50 cursor-not-allowed";
+      break;
+    case "noborder":
+      variantStyles = "font-medium bg-none hover:text-opacity-50 text-white";
       break;
   }
 
   return (
     <>
-      <button
-        className={clsx(
-          className,
-          variantStyles,
-          iconsSize,
-          sizeStyles,
-          className
+      <button className={clsx(variantStyles, iconSize, sizeStyles, className)}>
+        {icon && variant === "icon" ? (
+          <icon.icon size={iconSize} />
+        ) : (
+          <div className={clsx(icon && "flex items-center gap-2")}>
+            {icon && iconPosition === "left" && <icon.icon size={iconSize} />}
+            {children}
+            {icon && iconPosition === "right" && <icon.icon size={iconSize} />}
+          </div>
         )}
-      >
-        {children}
       </button>
     </>
   );

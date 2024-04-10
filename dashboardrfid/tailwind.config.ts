@@ -10,6 +10,13 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    borderRadius: {
+      DEFAULT: '6px',
+      'full': '9999px',
+      'lg' : '15px',
+      'md': '12px',
+      'sm': '4px'
+    },
     fontSize: {
       "4xl": [
         "64px",
