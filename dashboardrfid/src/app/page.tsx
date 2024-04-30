@@ -12,7 +12,7 @@ export default function Home() {
             <Button>Design Systeme</Button>
           </Link>
           <Link href="/home">
-            <Button>Home</Button>
+            <Button  variant="outline">Home</Button>
           </Link>
         </div>
       </div>
