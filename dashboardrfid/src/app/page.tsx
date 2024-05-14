@@ -14,6 +14,18 @@ export default function Home() {
           <Link href="/home">
             <Button  variant="outline">Home</Button>
           </Link>
+          <Link href="/calendar">
+            <Button  variant="outline">calendar</Button>
+          </Link>
+          <Link href="/chart">
+            <Button  variant="outline">chart</Button>
+          </Link>
+          <Link href="/server">
+            <Button  variant="outline">server</Button>
+          </Link>
+          <Link href="/settings">
+            <Button  variant="outline">Settings</Button>
+          </Link>
         </div>
       </div>
     </>
