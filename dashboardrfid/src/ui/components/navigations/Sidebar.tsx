@@ -3,8 +3,8 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="flex bg-primary-600 w-fit h-screen">
-      <div className="flex flex-col items-center gap-[40px] pt-[30px] pl-[25px]">
+    <aside className="flex bg-primary-600 w-[130px] justify-end  fixed  h-full overflow-y-auto ">
+      <div className="flex flex-col items-center  gap-[40px] pt-[30px] pl-[25px]">
         <div className=" relative w-[40px] aspect-square">
           <Image
             src="/assets/svg/logoico.svg"
@@ -63,7 +63,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

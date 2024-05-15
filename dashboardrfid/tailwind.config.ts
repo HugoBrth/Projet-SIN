@@ -13,6 +13,7 @@ const config: Config = {
     borderRadius: {
       DEFAULT: '6px',
       'full': '9999px',
+      'xl': '24px',
       'lg' : '15px',
       'md': '12px',
       'sm': '4px'
@@ -44,6 +45,14 @@ const config: Config = {
         {
           fontWeight: "500",
         },
+      ],
+      "2.5xl": [
+        "20px",
+        {
+          fontWeight: "300",
+          letterSpacing: "-2%",
+        
+        }
       ],
       body: [
         "16px",
@@ -87,12 +96,20 @@ const config: Config = {
           letterSpacing: "3%",
         },
       ],
+      tiny: [
+        "12px",
+        {
+          fontWeight: "500",
+          letterSpacing: "3%",
+        },
+      ],
     },
     extend: {
       colors: {
         primary: {
           200: "#4F4F4F",
           400: "#242424",
+          500: "#545454",
           600: "#161717",
           800: "#000",
         },
