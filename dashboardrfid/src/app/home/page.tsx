@@ -7,7 +7,9 @@ const page = () => {
   return (
     <div className="min-h-screen bg-primary-400 ">
       <Sidebar />
-      <TopNavbar />
+      <div className="ml-[130px]">
+        <TopNavbar />
+      </div>
     </div>
   );
 };
