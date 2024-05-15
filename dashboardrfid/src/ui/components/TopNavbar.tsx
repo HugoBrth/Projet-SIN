@@ -30,7 +30,7 @@ const TopNavbar = () => {
             killian.boularand@icloud.com
           </Typographie>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 cursor-pointer">
             <div className="relative overflow-hidden  w-[40px] aspect-square rounded-full">
                 <Image src="/assets/img/pp.png" alt="pp"  fill style={{objectFit: 'cover', objectPosition: "center" }} />
             </div>
