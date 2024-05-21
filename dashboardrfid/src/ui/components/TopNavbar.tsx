@@ -22,19 +22,23 @@ const TopNavbar = () => {
 
       <div className="flex items-center gap-4">
         <div>
-          <Typographie variant="tiny"  className="font-normal">
+          <Typographie variant="tiny" className="font-normal">
             Boularand Killian | Admin
           </Typographie>
           <Typographie variant="tiny" className="font-normal" theme="grey">
-
             killian.boularand@icloud.com
           </Typographie>
         </div>
         <div className="flex items-center gap-3 cursor-pointer">
-            <div className="relative overflow-hidden  w-[40px] aspect-square rounded-full">
-                <Image src="/assets/img/pp.png" alt="pp"  fill style={{objectFit: 'cover', objectPosition: "center" }} />
-            </div>
-            <FaChevronDown color="white" size={15} />
+          <div className="relative overflow-hidden  w-[40px] aspect-square rounded-full">
+            <Image
+              src="/assets/img/pp.png"
+              alt="pp"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+          </div>
+          <FaChevronDown color="white" size={15} />
         </div>
       </div>
     </div>

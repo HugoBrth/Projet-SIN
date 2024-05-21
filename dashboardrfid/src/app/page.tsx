@@ -9,7 +9,7 @@ export default function Home() {
       <div className="p-5 bg-primary-400 min-h-screen">
         <div className="space-x-6">
           <Link href="/designsystem">
-            <Button>Design Systeme</Button>
+            <Button>Design System</Button>
           </Link>
           <Link href="/home">
             <Button  variant="outline">Home</Button>
